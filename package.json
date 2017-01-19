@@ -1,0 +1,27 @@
+{
+  "name": "bot",
+  "version": "0.0.1",
+  "description": "test bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "later"
+  },
+  "keywords": [
+    "messenger",
+    "bot",
+    "heroku",
+    "test",
+    "facebook"
+  ],
+  "author": "th3an7",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.0",
+    "request": "^2.79.0"
+  }
+}
