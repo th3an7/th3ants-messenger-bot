@@ -57,7 +57,7 @@ app.post('/webhook/', function (req, res) {
 		sendTextMessage(sender, "Witaj, jestem botem stworzonym przez Łukasza Ordona. Na chwilę obecną nie potrafię wiele ale szybko się uczę :) Dostępne komendy: help, wyszukaj, powtorz")
 		continue
 	}
-	if (text === 'powtorz') {
+	if (text === 'wyszukaj' + text.substring(0, 200)) {
 		sendTextMessage(sender, "Powtarzam: " + text.substring(0, 200))
 		continue
 	}
@@ -65,7 +65,7 @@ app.post('/webhook/', function (req, res) {
       }
       if (event.postback) {
         let text = JSON.stringify(event.postback)
-        sendTextMessage(sender, "Postback: "+text.substring(0, 200), token)
+        sendTextMessage(sender, "Postback: " + text.substring(0, 200), token)
         continue
       }
     }
