@@ -45,11 +45,15 @@ app.post('/webhook/', function (req, res) {
             sendGenericMessage(sender)
             continue
         }
-		if (text === 'Witaj') {
-			sendTextMessage(sender, "Witaj człowieku :)")
-			continue
-		}
-        sendTextMessage(sender, "Message received: " + text.substring(0, 200))
+	if (text === 'Witaj') {
+		sendTextMessage(sender, "Witaj człowieku :)")
+		continue
+	}
+	if (text === 'Hello') {
+		sendTextMessage(sender, "Hello human :)")
+		continue
+	}
+        sendTextMessage(sender, "Dostępne komendy: help, wyszukaj, powtorz")
       }
       if (event.postback) {
         let text = JSON.stringify(event.postback)
