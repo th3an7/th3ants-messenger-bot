@@ -41,10 +41,6 @@ app.post('/webhook/', function (req, res) {
       let sender = event.sender.id
       if (event.message && event.message.text) {
         let text = event.message.text
-        if (text === 'Generic') {
-            sendGenericMessage(sender)
-            continue
-        }
 	if (text === 'Witaj') {
 		sendTextMessage(sender, "Witaj człowieku :)")
 		continue
@@ -53,7 +49,7 @@ app.post('/webhook/', function (req, res) {
 		sendTextMessage(sender, "Hello human :)")
 		continue
 	}
-	if (text === 'help') {
+	if (text === 'help' || text === 'pomoc') {
 		sendTextMessage(sender, "Witaj, jestem botem stworzonym przez Łukasza Ordona. Na chwilę obecną nie potrafię wiele ale szybko się uczę :) Dostępne komendy: help, wyszukaj, powtorz")
 		continue
 	}
@@ -61,7 +57,7 @@ app.post('/webhook/', function (req, res) {
 		sendGenericMessage(sender)
 		continue
 	}
-        sendTextMessage(sender, "Dostępne komendy: help, wyszukaj, powtorz, tworca")
+        sendTextMessage(sender, "Dostępne komendy: pomoc, wyszukaj, powtorz, tworca")
       }
       if (event.postback) {
         let text = JSON.stringify(event.postback)
