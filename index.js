@@ -97,7 +97,7 @@ function sendGenericMessage(sender) {
                 "template_type": "generic",
                 "elements": [{
                     "title": "Łukasz Ordon",
-                    "subtitle": "tworca",
+                    "subtitle": "Twórca",
                     "image_url": "https://scontent.fwaw3-1.fna.fbcdn.net/v/t1.0-1/p160x160/12122500_916521868432464_2023659483745529837_n.jpg?oh=ad233366d70bb152d5aa74ffa8824df6&oe=590F3210",
                     "buttons": [{
                         "type": "web_url",
@@ -106,7 +106,7 @@ function sendGenericMessage(sender) {
                     }],
                 }, {
                     "title": "Zapraszam na streamy ;)",
-                    "subtitle": "na twitchu",
+                    "subtitle": "twitch.tv/th3an7",
                     "image_url": "https://www-cdn.jtvnw.net/images/twitch_logo3.jpg",
                     "buttons": [{
                         "type": "web_url",
