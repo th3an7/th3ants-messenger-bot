@@ -57,11 +57,11 @@ app.post('/webhook/', function (req, res) {
 		sendTextMessage(sender, "Witaj, jestem botem stworzonym przez Łukasza Ordona. Na chwilę obecną nie potrafię wiele ale szybko się uczę :) Dostępne komendy: help, wyszukaj, powtorz")
 		continue
 	}
-	if (text === 'wyszukaj') {
+	if (text === 'tworca') {
 		sendGenericMessage(sender)
 		continue
 	}
-        sendTextMessage(sender, "Dostępne komendy: help, wyszukaj, powtorz")
+        sendTextMessage(sender, "Dostępne komendy: help, wyszukaj, powtorz, tworca")
       }
       if (event.postback) {
         let text = JSON.stringify(event.postback)
@@ -99,26 +99,22 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "First card",
-                    "subtitle": "Element #1 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+                    "title": "Łukasz Ordon",
+                    "subtitle": "tworca",
+                    "image_url": "https://scontent.fwaw3-1.fna.fbcdn.net/v/t1.0-1/p160x160/12122500_916521868432464_2023659483745529837_n.jpg?oh=ad233366d70bb152d5aa74ffa8824df6&oe=590F3210",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.messenger.com",
-                        "title": "web url"
-                    }, {
-                        "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for first element in a generic bubble",
+                        "url": "https://www.facebook.com/Th3Ant",
+                        "title": "Profil"
                     }],
                 }, {
-                    "title": "Second card",
-                    "subtitle": "Element #2 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
+                    "title": "Zapraszam na streamy ;)",
+                    "subtitle": "na twitchu",
+                    "image_url": "https://www-cdn.jtvnw.net/images/twitch_logo3.jpg",
                     "buttons": [{
-                        "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for second element in a generic bubble",
+                        "type": "web_url",
+                        "title": "Link",
+                        "url": "https://www.twitch.tv/th3an7",
                     }],
                 }]
             }
