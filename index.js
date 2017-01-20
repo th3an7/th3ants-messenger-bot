@@ -57,8 +57,8 @@ app.post('/webhook/', function (req, res) {
 		sendTextMessage(sender, "Witaj, jestem botem stworzonym przez Łukasza Ordona. Na chwilę obecną nie potrafię wiele ale szybko się uczę :) Dostępne komendy: help, wyszukaj, powtorz")
 		continue
 	}
-	if (text = str.startsWith("powtorz")) {
-		sendTextMessage(sender, "Powtarzam: " + text.substring(0, 200))
+	if (text === 'wyszukaj') {
+		sendGenericMessage(sender)
 		continue
 	}
         sendTextMessage(sender, "Dostępne komendy: help, wyszukaj, powtorz")
