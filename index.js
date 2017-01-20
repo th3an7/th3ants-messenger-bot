@@ -51,14 +51,14 @@ app.post('/webhook/', function (req, res) {
 	}
 	if (text === 'help' || text === 'pomoc') {
 		sendTextMessage(sender, "Witaj, jestem botem stworzonym przez Łukasza Ordona. Na chwilę obecną nie potrafię wiele ale szybko się uczę :)")
-		sendTextMessage(sender, "Dostępne komendy: pomoc, wyszukaj, powtórz, twórca")
+		sendTextMessage(sender, "Dostępne komendy: pomoc, twórca")
 		continue
 	}
 	if (text === 'twórca' || text === 'tworca') {
 		sendGenericMessage(sender)
 		continue
 	}
-        sendTextMessage(sender, "Niestety, ale nie rozumiem jeszcze tego polecenia - Dostępne komendy: pomoc, wyszukaj, powtorz, tworca")
+        sendTextMessage(sender, "Niestety, ale nie rozumiem jeszcze tego polecenia - Dostępne komendy: pomoc, tworca")
       }
       if (event.postback) {
         let text = JSON.stringify(event.postback)
