@@ -137,7 +137,6 @@ function sendGenericMessage(sender) {
                         "url": "https://www.google.com",
                         "title": "Wyszukaj"
                 }]
-            }
         }
     }
     
