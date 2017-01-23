@@ -136,7 +136,6 @@ function sendGenericMessage(sender) {
                         "type": "web_url",
                         "url": "https://www.google.com",
                         "title": "Wyszukaj"
-                    }
                 }]
             }
         }
