@@ -122,7 +122,8 @@ function sendGenericMessage(sender) {
         }
     }
     
-    function sendSearchMessage(sender) {
+    
+    function sendGenericMessage(sender) {
     let messageData = {
         "attachment": {
             "type": "template",
@@ -130,14 +131,26 @@ function sendGenericMessage(sender) {
                 "template_type": "generic",
                 "elements": [{
                     "title": "Google",
-                    "subtitle": "Szukaj",
+                    "subtitle": "Wyszukaj",
                     "image_url": "http://www.underconsideration.com/brandnew/archives/google_2015_logo_detail.png",
                     "buttons": [{
                         "type": "web_url",
                         "url": "https://www.google.com",
-                        "title": "Wyszukaj"
+                        "title": "Szukaj"
+                    }],
+                }, {
+                    "title": "TEST",
+                    "subtitle": "TEST",
+                    "image_url": "https://learn.getgrav.org/user/pages/11.troubleshooting/01.page-not-found/error-404.png",
+                    "buttons": [{
+                        "type": "web_url",
+                        "title": "OOPS",
+                        "url": "https://www.google.pl/search?q=404&hl=pl&biw=1920&bih=971&site=webhp&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjK7s_tkdjRAhXEZpoKHb8zClgQ_AUIBigB#imgrc=GjlM76K_5yISSM%3A",
+                    }],
                 }]
+            }
         }
+    }
     
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
