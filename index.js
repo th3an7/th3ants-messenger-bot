@@ -123,7 +123,7 @@ function sendGenericMessage(sender) {
     }
     
     
-    function sendGenericMessage(sender) {
+    function sendSearchMessage(sender) {
     let messageData = {
         "attachment": {
             "type": "template",
