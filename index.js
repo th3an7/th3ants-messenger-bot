@@ -58,6 +58,10 @@ app.post('/webhook/', function (req, res) {
 		sendGenericMessage(sender)
 		continue
 	}
+	if (text === 'szukaj') {
+		SentSearchMessage(sender)
+		continue
+	}
         sendTextMessage(sender, "Niestety, ale nie rozumiem jeszcze tego polecenia - Dostępne komendy: pomoc, tworca")
       }
       if (event.postback) {
@@ -117,6 +121,27 @@ function sendGenericMessage(sender) {
             }
         }
     }
+    
+    function sendSearchMessage(sender) {
+    let messageData = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [{
+                    "title": "Google",
+                    "subtitle": "Szukaj",
+                    "image_url": "http://www.underconsideration.com/brandnew/archives/google_2015_logo_detail.png",
+                    "buttons": [{
+                        "type": "web_url",
+                        "url": "https://www.google.com",
+                        "title": "Wyszukaj"
+                    }
+                }]
+            }
+        }
+    }
+    
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
         qs: {access_token:token},
