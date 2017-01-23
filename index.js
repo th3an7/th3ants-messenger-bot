@@ -41,11 +41,11 @@ app.post('/webhook/', function (req, res) {
       let sender = event.sender.id
       if (event.message && event.message.text) {
         let text = event.message.text
-	if (text === 'Witaj') {
+	if (text === 'Witaj' || text === 'witaj') {
 		sendTextMessage(sender, "Witaj człowieku :)")
 		continue
 	}
-	if (text === 'Hello') {
+	if (text === 'Hello' || text === 'hello') {
 		sendTextMessage(sender, "Hello human :)")
 		continue
 	}
