@@ -138,7 +138,6 @@ function sendGenericMessage(sender) {
                         "title": "Wyszukaj"
                 }]
         }
-    }
     
     request({
         url: 'https://graph.facebook.com/v2.6/me/messages',
